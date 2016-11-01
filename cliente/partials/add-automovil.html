@@ -1,0 +1,52 @@
+<h2 class="col-l-12 ">Agregar Automovil</h2>
+
+
+<h3 class="col-l-6 col-xs-offset-4">Informacion del Automovil</h3>
+<hr size="10"width="50%"/>
+
+<div class="row col-xs-offset-1">
+    
+    <div class="from-group col-xs-5">
+        <label>Tipo de Automovil</label>
+        <select class="form-control" ng-model="car.type">
+            <option value="1">Tipo 1</option>
+            <option value="2">Tipo 2</option>
+            <option value="3">Tipo 3</option>
+        </select>
+    </div>
+    
+    <div class="from-group col-xs-5" style="margin-bottom: 10px;">
+        <label>Modelo del Automovil</label>
+        <input type="text" class="form-control" placeholder="Ingrese su apellido" ng-model="cabbie.Lastname"/>
+    </div>
+
+    <div class="from-group col-xs-5">
+        <label>Año del Automovil</label>
+        <input type="text" class="form-control" placeholder="Ingrese su numero de telefono" ng-model="cabbie.Phone" />
+    </div>
+        
+    <div class="from-group col-xs-5" style="margin-bottom: 10px;">
+        <label>Cantidad de pasajeros</label>
+        <select class="form-control" ng-model="car.personas">
+            <option value="1">2 personas</option>
+            <option value="2">4 personas</option>
+            <option value="3">8 personas</option>
+        </select>
+    </div>
+
+    <div class="from-group col-xs-5">
+        <label>Placas del automovil</label>
+        <input type="text" class="form-control datepicker" placeholder="Ingrese su fecha de nacimiento" ng-model="cabbie.date" />
+    </div>
+
+    <div class="from-group col-xs-5" style="margin-bottom: 10px;">
+    	<label>Numero de Unidad</label>
+    	<input type="text" class="form-control datepicker" placeholder="Ingrese su fecha de nacimiento" ng-model="cabbie.date" />
+    </div>
+
+    <div class="from-group col-xs-5">
+        <label>Foto del Automovil</label>
+        <input type="file" placeholder="Ingrese una imagen" ng-model="cabbie.Photo"/>
+    </div>
+
+</div>

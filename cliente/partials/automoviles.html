@@ -1,0 +1,50 @@
+<h2>Automoviles</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+        <form role="form">
+            <div class="form-group input-group">
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="Buscar..." ng-model="search">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row" ng-init="getCars()">
+    <div class="col-lg-12">
+        
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Modelo</th>
+                        <th>Año</th>
+                        <th>Placas</th>
+                        <th>Numero de unidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                               
+                    <tr ng-repeat="car in listCars | filter : search" 
+                    ng-class="{'warning' : {{cabbie.actv}} == 500}">
+                        <td>{{car.Car_Id}}</td>
+                        <td>{{car.Model}}</td>
+                        <td>{{car.Phone}}</td>
+                        <td>{{car.Email}}</td>
+                        <td>{{car.photo}}</td>
+                        <td>
+                        <a href="#/view-automoviles" class="btn btn-info"><i class="fa fa-search"></i></a>
+                        <button class="btn btn-danger" ><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                        <a href="#/view-automoviles" class="btn btn-success"><i class="fa fa-pencil"></i></a>
+                        </td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>

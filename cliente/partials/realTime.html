@@ -1,0 +1,7 @@
+<ui-gmap-google-map center='map.center' zoom='map.zoom' ng-init="get_cabbies_coordinates()">
+	
+	<ui-gmap-marker ng-repeat="a in listaCoordenadas" coords="{latitude : a.Latitude, longitude : a.Longitude}" options="markers.options" idkey="a.Cabbie_Id">
+        </ui-gmap-marker>
+
+
+</ui-gmap-google-map>

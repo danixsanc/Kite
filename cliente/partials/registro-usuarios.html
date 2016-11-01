@@ -1,0 +1,79 @@
+<h2 class="col-l-12 ">Agregar Administradores</h2>
+
+
+<h3 class="col-l-6 col-xs-offset-4">Informacion Basica</h3>
+<hr size="10"width="50%"/>
+
+<div class="row col-xs-offset-1">
+    
+    <div class="from-group col-xs-5">
+        <label>Nombre</label>
+         <input type="text" class="form-control" placeholder="Ingrese su nombre" ng-model="user.Name"/>
+    </div>
+    
+    <div class="from-group col-xs-5" style="margin-bottom: 10px;">
+        <label>Apellido</label>
+        <input type="text" class="form-control" placeholder="Ingrese su apellido" ng-model="user.Lastname" />
+    </div>
+        
+    <div class="from-group col-xs-5">
+        <label>Telefono</label>
+        <input type="text" class="form-control" placeholder="Ingrese su numero de telefono" ng-model="user.Phone" />
+    </div>
+
+    <div class="from-group col-xs-5" style="margin-bottom: 10px;">
+        <label>Fecha de nacimiento</label>
+        <input type="date" class="form-control datepicker" placeholder="Ingrese su fecha de nacimiento" ng-model="user.Date" />
+    </div>
+
+    <div class="from-group col-xs-5">
+        <label>Sexo</label>
+        <select class="form-control" ng-model="user.Sex">
+            <option value="1">Masculino</option>
+             <option value="2">Femenino</option>
+        </select>
+    </div>
+
+</div>
+
+<br>
+
+<h3 class="col-l-6 col-xs-offset-4">Informacion del Administrador</h3>
+<hr size="10"width="50%"/>
+
+<div class="row col-xs-offset-1">
+
+    <div class="from-group col-xs-5">
+        <label>Compañia</label>
+        <input type="text" class="form-control" placeholder="Ingrese su Compañia" ng-model="user.Company" />
+    </div>
+
+    <div class="from-group col-xs-5" style="margin-bottom: 10px;">
+        <label>Correo</label>
+        <input type="text" class="form-control" placeholder="Ingrese su correo electrónico" ng-model="user.Email" />
+    </div>  
+
+    <div class="from-group col-xs-5">
+        <label>Contraseña</label>
+        <input type="password" class="form-control" placeholder="Ingrese su Contraseña" ng-model="user.Password" />
+    </div>
+    
+    <div class="from-group col-xs-5" style="margin-bottom: 10px;">
+        <label>Repetir Contraseña</label>
+        <input type="password" class="form-control" placeholder="Ingrese su Contraseña" ng-model="user.Password" />
+    </div>
+
+    <div class="from-group col-xs-5">
+        <label>Numero de contrato</label>
+        <input type="text" class="form-control" placeholder="Ingrese su Numero de contrato" ng-model="user.Contract" />
+    </div>
+
+  </div>
+
+
+
+<!--
+
+            <button type="button" class="btn btn-danger">Cancelar</button>
+            <button type="button" class="btn btn-success">Agregar</button>
+ -->

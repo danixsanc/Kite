@@ -1,0 +1,83 @@
+<h2 class="col-l-12 ">Agregar Reservacion</h2>
+
+
+<h3 class="col-l-6 col-xs-offset-4">Informacion del Usuario</h3>
+<hr size="10"width="50%"/>
+
+<div class="row col-xs-offset-1">
+    
+    <div class="from-group col-xs-5">
+        <label>Nombre</label>
+        <input type="text" class="form-control" placeholder="Ingrese su nombre" ng-model="cabbie.Name"/>
+    </div>
+    
+    <div class="from-group col-xs-5" style="margin-bottom: 10px;">
+        <label>Apellido</label>
+        <input type="text" class="form-control" placeholder="Ingrese su apellido" ng-model="cabbie.Lastname"/>
+    </div>
+
+    <div class="from-group col-xs-5">
+        <label>Telefono</label>
+        <input type="text" class="form-control" placeholder="Ingrese su numero de telefono" ng-model="cabbie.Phone" />
+    </div>
+        
+    <div class="from-group col-xs-5" style="margin-bottom: 10px;">
+        <label>Ubicacion del cliente</label>
+        <input type="text" class="form-control" placeholder="Ingrese Ubicacion del cliente" ng-model="reservation.ClientUbication" />
+    </div>
+
+    <div class="from-group col-xs-5">
+        <label>Destino</label>
+        <input type="text" class="form-control" placeholder="Ingrese su Destino" ng-model="reservation.Destiny" />
+    </div>
+
+    <div class="from-group col-xs-5" style="margin-bottom: 10px;">
+        <label>Fecha de reservacion</label>
+        <input type="date" class="form-control" placeholder="Ingrese su Destino" ng-model="reservation.Destiny" />
+    </div>
+
+    <div class="from-group col-xs-5">
+        <label>Hora de la reservacion</label>
+        <input type="time" class="form-control" placeholder="Ingrese su Destino" ng-model="reservation.Destiny" />
+    </div>
+
+        <div class="from-group col-xs-5" style="margin-bottom: 10px;">
+        <label>Tipo de Auto</label>
+        <select class="form-control" ng-model="cabbie.Cartype">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="2">3</option>
+        </select>
+    </div>
+
+</div>
+
+<br>
+
+<h3 class="col-l-6 col-xs-offset-4">Informacion del Taxista</h3>
+<hr size="10"width="50%"/>
+
+<div class="row col-xs-offset-1">
+
+    <div class="from-group col-xs-5">
+        <label>Nombre del taxista</label>
+        <input type="text" class="form-control" placeholder="Ingrese su nombre" ng-model="cabbie.Name"/>
+    </div>
+
+    <div class="from-group col-xs-5" style="margin-bottom: 10px;">
+        <label>Numero de Unidad</label>
+        <input type="text" class="form-control" placeholder="Ingrese su apellido" ng-model="cabbie.Number" />
+    </div>  
+
+    <div class="from-group col-xs-5">
+        <label>Numero de servicio</label>
+        <input type="text" class="form-control" placeholder="Ingrese su Numero de servicio"ng-model="reservation.Servicenumber" />
+    </div>
+    
+    <div class="from-group col-xs-5" style="margin-bottom: 10px;">
+        <label>Numero de Unidad Asignada</label>
+        <input type="text" class="form-control" placeholder="Ingrese la unidad asignada"ng-model="reservation.Unitynumber"/>
+    </div>
+
+
+</div>
