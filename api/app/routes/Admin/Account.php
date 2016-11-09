@@ -16,7 +16,7 @@ $app->post("/loginSystem/", function() use($app){
 	try{
 
 		$connection = getConnection();
-		$dbh = $connection->prepare("SELECT Admin_Id, Company, Email, Encrypted_Password, Salt FROM Admin WHERE Email = :E");
+		$dbh = $connection->prepare("SELECT idUser, Name, Email, Password, Salt, Boss FROM User WHERE Email = :E");
 		$dbh->bindParam(':E', $email);
 		$dbh->execute();
 
@@ -25,7 +25,7 @@ $app->post("/loginSystem/", function() use($app){
 		if ($admin_user != false) {
 			
 			$salt = $admin_user->Salt;
-	        $encrypted_password = $admin_user->Encrypted_Password;
+	        $encrypted_password = $admin_user->Password;
 
 	        $hash = base64_encode(sha1($password . $salt, true) . $salt);
 
@@ -33,14 +33,15 @@ $app->post("/loginSystem/", function() use($app){
 		        if (!isset($_SESSION)) {
 		            session_start();
 		        }
-		        $_SESSION['uid'] = $admin_user->Admin_Id;
+		        $_SESSION['uid'] = $admin_user->idUser;
 		        $_SESSION['email'] = $email;
-		        $_SESSION['name'] =  $admin_user->Company;
+		        $_SESSION['name'] =  $admin_user->Name;
+		        $_SESSION['boss'] =  $admin_user->Boss;
 				$connection = null;
 
-				$response['message'] = "OK";
+				$response['Message'] = "OK";
 				$response['IsError'] = false;
-				$response['data'] = $admin_user;
+				$response['Data'] = $admin_user;
 
 
 				$app->response->headers->set("Content-type", "application/json");
@@ -78,12 +79,14 @@ $app->get("/session/", function() use($app){
             $sess["uid"] = $_SESSION['uid'];
             $sess["name"] = $_SESSION['name'];
             $sess["email"] = $_SESSION['email'];
+            $sess["boss"] = $_SESSION['boss'];
         }
         else
         {
             $sess["uid"] = '';
             $sess["name"] = 'Guest';
             $sess["email"] = '';
+            $sess["boss"] = '';
         }
         $app->response->body(json_encode($sess));
 });
